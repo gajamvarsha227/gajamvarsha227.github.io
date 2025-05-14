@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Calculator</h1>
+
+    <div class="row">
+      <div>
+        <p>
+          <input type="number" id="n1" />
+        </p>
+        <p><input type="number" id="n2" /></p>
+        <button onclick="calc()">Calculate</button>
+        <button onclick="dispResult()">Show Result</button>
+        <button onclick="hideResult()">Hide Result</button>
+      </div>
+      <div id="resultDiv">
+        <p id="dvAdd"></p>
+        <p id="dvSubtract"></p>
+        <p id="dvMultiply"></p>
+        <p id="dvDivide"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
