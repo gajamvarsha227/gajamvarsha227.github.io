@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+    <style>
+        input
+        {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: lightblue;
+        }
+        input::placeholder
+        {
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        button
+        {
+            padding: 6px;
+            width: 70px;
+            border-radius: 5px;
+            background-color: lightcoral;
+            margin-left: 8px;
+        }
+        li
+        {
+        margin: 8px 0;
+        list-style: none;
+        font-size: 18px;
+        }
+        li button 
+        {
+        margin-left: 10px;
+        padding: 4px 8px;
+        font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruits List</h1>
+    <input type="text" placeholder="Enter afruit or vegetable" id="txtveg">
+    <button onclick="addveg()">Add</button>
+    <ul id="veglist"></ul>
+    <hr>
+    <hr>
+    <h1>Fruit List Filtering</h1>
+    <input type="text" placeholder="Enter fruit or veggie to search" id="txtvegsearch">
+    <button onclick="filtlist()">Search</button>
+    <ul id="filteredlist"></ul>
+
+    <script>
+        let veggies=[]
+        function addveg()
+        {
+            let v=document.getElementById('txtveg').value;
+            if(v.trim()!=='')
+            {
+                veggies.push(v);
+                displist();
+                document.getElementById('txtveg').value='';
+            }
+        }
+
+        function delVeg(value)
+        {
+            veggies=veggies.filter(v1=>v1!==value);
+            displist();
+        }
+
+        function displist()
+        {
+            let str="";
+            for(let i=0;i<veggies.length;i++)
+            {
+                str+=`<li>${veggies[i]} <button onclick="delVeg('${veggies[i]}')">Delete</button></li>`;
+            }
+            document.getElementById('veglist').innerHTML=str;
+        }
+
+        // ------------------------------------------------------------------------
+        // -----------------------------------------------------------------------------
+
+        let fruits=['apple','mango','orange','pineapple']
+
+        function showallfruits()
+        {
+            let str3="";
+            for(let i=0;i<fruits.length;i++)
+            {
+                str3+="<li>"+fruits[i]+"</li>";
+            }
+            document.getElementById('filteredlist').innerHTML=str3;
+        }
+
+        function filtlist()
+        {
+            let v1=document.getElementById('txtvegsearch').value;
+            let str2="";
+            let found=false;
+            for(let i=0;i<fruits.length;i++)
+            {
+                // if(fruits[i].toLowerCase().includes(v1))
+                if(fruits[i].toLowerCase()===v1)
+                {
+                    str2+="<li>"+fruits[i]+"</li>";
+                    found=true;
+                }
+            }
+            if (!found) 
+            {
+            str2="<li>Not found</li>";
+            }
+            document.getElementById('filteredlist').innerHTML=str2;
+        }
+        window.onload=showallfruits;
+    </script>
+</body>
+</html>
