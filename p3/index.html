@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bank ATM</h1>
+    <hr/>
+
+    <div id="loginScreen">
+    <input type="text" id="card" placeholder="Enter Card Number" /><br/><br/>
+    <input type="password" id="pin" placeholder="Enter PIN" /><br/><br/>
+    <button onclick="login()">Submit</button>
+    <p id="error" style="color:rgb(139, 11, 243);"></p>
+  </div>
+
+  <div id="welcomeScreen" style="display: none;">
+    <h2 id="welcomeMsg"></h2>
+  </div>
+    <script src="index.js"></script>
+</body>
+</html>
