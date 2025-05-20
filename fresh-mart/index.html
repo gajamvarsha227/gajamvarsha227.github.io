@@ -1,336 +1,367 @@
-<html>
-    <head>
-        <title>Food Mart</title>
-        <meta charset="UTF-8" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body >
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="file:///C:/Users/Hp/Desktop/Images/img/logo.png" alt="logo" width="200px" />
+        <div class="search-container">
+          <select style="color: gray">
+            <option>All Categories</option>
+            <option>Smoothies and juices</option>
+            <option>Fruits and veggies</option>
+            <option>Honey</option>
+            <option>Baked products</option>
+            <option>Sweets</option>
+          </select>
+          <input
+            class="search-input"
+            type="text"
+            placeholder="Search for more than 20,000 products"
+          />
+          <span class="search-icon">&#128269;</span>
+        </div>
+        <div class="contact">
+          <h4 style="color: gray">For Support?</h4>
+          <h3>+980-34984089</h3>
+        </div>
+        <div class="emo1">
+          <img
+            src="file:///C:/Users/Hp/Desktop/Images/img/icons8-person-64.png"
+            alt="contact"
+            width="20px"
+            height="30px"
+          />
+        </div>
+
+        <div class="emo2">
+          <img
+            src="file:///C:/Users/Hp/Desktop/Images/img/icons8-heart-50.png"
+            alt="favorite"
+            width="20px"
+            height="30px"
+          />
+        </div>
+        <div class="cart">
+          <h4 style="color: gray">Your Cart ▾</h4>
+          <h3>$1290.00</h3>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="departments">
+        <select style="color: gray">
+          <option>Shop by Departments</option>
+          <option>Smoothies and juices</option>
+          <option>Fruits and veggies</option>
+          <option>Honey</option>
+          <option>Baked products</option>
+          <option>Sweets</option>
+        </select>
+        <div class="menu" style="color: gray">
+          <span>Women</span>
+          <span>Men</span>
+          <span>Kids</span>
+          <span>Accessories</span>
+          <span>Pages▾</span>
+          <span>Brand</span>
+          <span>Sale</span>
+          <span>Blog</span>
+        </div>
+      </section>
+      <section class="ads">
+        <div class="left-ad">
+          <h4>100% Natural</h4>
+          <h1>
+            Fresh Smoothie <br />
+            & Summer Juice
+          </h1>
+          <p>
+            Buy these smoothies and juices which are natural <br />
+            and fresh made from organic fruits.
+          </p>
+          <button>Shop Now</button>
+          <img sr="file:///C:/Users/Hp/Desktop/Images/img/product-thumb-1.png" alt="juice" />
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="right-ads">
+          <div class="ad-box green">
+            <h2>20% Off</h2>
+            <p class="sale">---------- SALE</p>
+            <h3>Fruits & Vegetables</h3>
+            <a href="#">Shop Collection →</a>
+            <img src="file:///C:/Users/Hp/Desktop/Images/img/ad-image-1.png" alt="veggie" />
+          </div>
+          <div class="ad-box peach">
+            <h2>15% Off</h2>
+            <p class="sale">---------- SALE</p>
+            <h3>Baked Products</h3>
+            <a href="#">Shop Collection →</a>
+            <img src="file:///C:/Users/Hp/Desktop/Images/img/ad-image-2.png" alt="baked" />
+          </div>
+        </div>
+      </section>
+      <section class="category-section">
+        <div class="category-header">
+          <h2>Category</h2>
+          <div class="view-all">
+            <a href="#">View All Categories →</a>
+            <button>&lt;</button>
+            <button>&gt;</button>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <div class="category-card">
+            <img
+              src="file:///C:/Users/Hp/Desktop/Images/img/ad-image-2.png"
+              alt="Fruits & Veges"
+            />
+            <p>Fruits & Veges</p>
+          </div>
+          <div class="category-card">
+            <img src="file:///C:/Users/Hp/Desktop/Images/img/icon-bread-baguette.png" alt="Breads & Sweets" />
+            <p>Breads & Sweets</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="file:///C:/Users/Hp/Desktop/Images/img/icon-soft-drinks-bottle.png"
+              alt="Fruits & Veges"
+            />
+            <p>Soft drinks</p>
+          </div>
+          <div class="category-card">
+            <img src="file:///C:/Users/Hp/Desktop/Images/img/icon-wine-glass-bottle.png" alt="Fruits & Veges" />
+            <p>Wine</p>
+          </div>
+          <div class="category-card">
+            <img
+              src="file:///C:/Users/Hp/Desktop/Images/img/icon-animal-products-drumsticks.png"
+              alt="Fruits & Veges"
+            />
+            <p>Non-veg</p>
+          </div>
+          <div class="category-card">
+            <img src="file:///C:/Users/Hp/Desktop/Images/img/icon-bread-herb-flour.png" alt="Fruits & Veges" />
+            <p>Herbs</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="newly-arrived-section">
         <div class="container">
-           
-        <header>
-        <div class="logo">
-        <img src="img/logo.png" class="image" width="200px" alt="hehe">
-        </div>
-        <div class="search">
-        <div>
-            <p><select style="background-color: rgb(235, 235, 235);color:grey;border: 0px;font-size: 16px;">
-                <option style="color:grey;font-size: medium;"> All Categories</option>
-                <option style="color:grey;font-size: medium;"> Icecream</option>
-                <option style="color:grey;font-size: medium;"> Bread</option>
-            </select></p>
-        </div>
-        <div>
-           <input type="text" style="background-color: rgb(238, 238, 238);border: 0px;width: 300px;font-size: medium;" placeholder="Search for more than 20,000 products">
-        </div>
-       <img src="img/search.png" alt="Search"  style="width: 20px; height: 30px;">
-       </div>
-        <div>
-    <p style="margin: 0; font-size: 14px;color: gray;">For Support?<br>
-    <strong style="color: black;">+999-999999999</strong></p>
-  </div>
-  <div>
-    <img src="img/profilelogo.png"  alt="null" >
-  </div>
-  <div>
-    <select style="background-color: white;color: gray;border: 0px;">
-        <option>Your Cart</option>
-        <option>Wishlist</option>
-    </select>
-     <p class="p1"><span class="rupee-symbol">&#8377;</span>1000</p>
-  </div>
+          <div class="header">
+            <h2>Newly Arrived Brands</h2>
+            <span class="categories-link">View All Categories →</span>
+          </div>
 
-       
-        </header>
-        <div>
-            <select style="color:grey;font-size: medium;border: 0px;width: 230px;font-size:medium;background-color:rgb(238, 238, 238);border-radius: 10px;margin-left: 15px;">
-                <option>Shop by Departments</option>
-                 <option >Bakery</option>
-                  <option >Frozen Food</option>
-                   <option >Packaged Food</option>
-            </select>
+          <div class="cards">
+            <div class="card">
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-honey.jpg" alt="Product 1" />
+              <div class="title">Amber Jar</div>
+              <div class="description">Honey best nectar you wish to get</div>
+            </div>
+            <div class="card">
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-herb.jpg" alt="Product 2" />
+              <div class="title">Herb Packets</div>
+              <div class="description">Organic herbs you wish to get</div>
+            </div>
+            <div class="card">
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-tuna.jpg" alt="Product 3" />
+              <div class="title">Tuna</div>
+              <div class="description">Fresh tuna you wish to get</div>
+            </div>
+            <div class="card">
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-junk.jpg" alt="Product 4" />
+              <div class="title">Snacks pack</div>
+              <div class="description">Crunchy snacks you wish to get</div>
+            </div>
+          </div>
         </div>
-        <div class="belowheader">
-        <div class="smoothie">
-                <img class="smoo" src="img/slide-1.jpg" alt="null" width="750px">
-                <h1 class="natural">80% Natural</h1>
-                 <p class="smo">Fresh Smoothie & </br>
-                    Summer Juice</p>
-                    <button class="sn">Shop Now</button>
-        </div>
-        <div class="rightcolumn">
-        <div class="veggies">
-            <img src="img/slide-3.jpg" width="450px">
-            <h1 class="perc">20% Off</h1>
-            <h2 class="sale">--------SALE</h2>
-            <p class="fav">Fruits &</br> Vegetables</p>
-           <p class="sc">Shop Collection -></p> 
+      </section>
 
-        </div>
-        <div class="baked">
-             <img src="img/slide-4.jpg" width="450px">
-            <h1 class="perc2">15% Off</h1>
-            <h2 class="sale2">--------SALE</h2>
-            <p class="fav2">Baked</br>Products</p>
-           <p class="sc2">Shop Collection -></p> 
+      <section class="trending-products">
+        <div class="container">
+          <div class="section-header">
+            <h2>Trending Products</h2>
+            <div class="filters">
+              <span class="filter active">All</span>
+              <span class="filter">Fruits & Veggies</span>
+              <span class="filter">Juices</span>
+            </div>
+          </div>
 
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="discount-badge">-30%</div>
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-bananas.png" alt="Product" />
+              <h4>Sunstar Fresh Bananas</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.7</span></p>
+              <p class="price">$5.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="discount-badge">-30%</div>
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-biscuits.png" alt="Product" />
+              <h4>Sunstar Fresh Biscuits</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.8</span></p>
+              <p class="price">$7.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-cucumber.png" alt="Product" />
+              <h4>Sunstar Fresh Cucumber</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.7</span></p>
+              <p class="price">$9.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-milk.png" alt="Product" />
+              <h4>Sunstar Fresh Milk</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.5</span></p>
+              <p class="price">$5.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-raspberries.png" alt="Product" />
+              <h4>Sunstar Fresh Raspberries</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.4</span></p>
+              <p class="price">$12.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-tomatoketchup.png" alt="Product" />
+              <h4>Sunstar Fresh Tomato ketchup</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.6</span></p>
+              <p class="price">$11.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-tomatoes.png" alt="Product" />
+              <h4>Sunstar Fresh Tomatoes</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.3</span></p>
+              <p class="price">$8.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-orange-juice.png" alt="Product" />
+              <h4>Sunstar Fresh Orange Juice</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.8</span></p>
+              <p class="price">$15.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/thumb-avocado.png" alt="Product" />
+              <h4>Sunstar Fresh Avacado Juice</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.5</span></p>
+              <p class="price">$20.00</p>
+            </div>
+
+            <div class="product-card">
+              <div class="favorite">&#9825;</div>
+              <img src="file:///C:/Users/Hp/Desktop/Images/img/post-thumb-2.jpg" alt="Product" />
+              <h4>Sunstar Fresh Cashew Butter</h4>
+              <p class="unit">1 UNIT <span class="rating">⭐ 4.9</span></p>
+              <p class="price">$38.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col logo-social">
+          <img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/images/logo.png" alt="FoodMart Logo" class="logo" />
+          <div class="social-icons">
+            <a href="#"
+              ><img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/icons8-facebook-50-2.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/icons8-twitter-bird-30.png" alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/icons8-youtube-30.png" alt="YouTube"
+            /></a>
+            <a href="#"
+              ><img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/icons8-instagram-50.png" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="file:///C:/Users/Hp/Desktop/New%20folder/food-mart-main%20(3)/food-mart-main/icons8-amazon-30.png" alt="Amazon"
+            /></a>
+          </div>
         </div>
 
+        <div class="footer-col">
+          <h4>Ultras</h4>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Our Journals</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Affiliate Programme</a></li>
+            <li><a href="#">Ultras Press</a></li>
+          </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Cookie Guidelines</a></li>
+            <li><a href="#">Delivery Information</a></li>
+          </ul>
         </div>
-        <h2 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Categories:</h2>
-        <div class="C">
-        <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-vegetables-broccoli.png" alt="null" width="40px">
-                    <h5 class="c1h5">Fruits And Veggies</h5>
-              </div>
+
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Cookie Guidelines</a></li>
+            <li><a href="#">Delivery Information</a></li>
+          </ul>
         </div>
-         <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-bread-baguette.png" alt="null" width="40px">
-                    <h5 class="c1h5">Bread</h5>
-              </div>
+
+        <div class="footer-col subscribe">
+          <h4>Subscribe Us</h4>
+          <p>
+            Subscribe to our newsletter to get updates about our grand offers.
+          </p>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email Address" required />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
-         <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-soft-drinks-bottle.png" alt="null" width="40px">
-                    <h5 class="c1h5">Soft Drinks</h5>
-              </div>
-        </div>
-         <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-bread-herb-flour.png" alt="null" width="40px">
-                    <h5 class="c1h5">Suppliments</h5>
-              </div>
-        </div>
-         <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-animal-products-drumsticks.png" alt="null" width="40px">
-                    <h5 class="c1h5">Meat</h5>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c1">
-                    <img src="img/icon-wine-glass-bottle.png" alt="null" width="40px">
-                    <h5 class="c1h5">Wine</h5>
-              </div>
-        </div>
-        </div>
-         <h2 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Newly Arrived Brands:</h2>
-       
-        <div class="nab">
-        <div class="c2">
-      <img class="img" src="img/product-thumb-11.jpg" alt="null" width="70px">
-      <div class="text-content">
-        <p class="p1">Amber jar</p>
-        <p class="p2">Honey best nuclear you wish to get</p>
       </div>
-    </div>
-    <div class="c2">
-      <img class="img" src="img/product-thumb-13.jpg" alt="null" width="70px">
-      <div class="text-content">
-        <p class="p1">Tuna</p>
-        <p class="p2">Ocean-fresh tuna, rich in protein</p>
-      </div>
-    </div>
-    <div class="c2">
-      <img class="img" src="img/product-thumb-12.jpg" alt="null" width="70px">
-      <div class="text-content">
-        <p class="p1">Herbs</p>
-        <p class="p2">Natural herbs</p>
-      </div>
-    </div>
-    <div class="c2">
-      <img class="img" src="img/thumb-junk.jpg" alt="null" width="70px">
-      <div class="text-content">
-        <p class="p1">Junk</p>
-        <p class="p2">Crunchy, tangy, perfect snack mix</p>
-      </div>
-    </div>
-  </div>
-  <h2 style="color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Trending Products: </h2>
-  <div class="C">
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-milk.png" alt="null" width="130px">   
-                </div>
-                <h5 class="c1h5">Fresh Milk</h5>
-                <p class="p2" >1 Litre <span class="gold-star">&#9733;</span>4.3</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>40</p>
-              </div>
-        </div>
-         <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-orange-juice.png" alt="null" width="80px">   
-                </div>
-                <h5 class="c1h5">Orange Juice</h5>
-                <p class="p2" >250ml<span class="gold-star">&#9733;</span>4.1</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>20</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-cucumber.png" alt="null" width="100px">   
-                </div>
-                <h5 class="c1h5">Cucumber</h5>
-                <p class="p2" >1/2 kg <span class="gold-star">&#9733;</span>3.9</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>30</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-biscuits.png" alt="null" width="110px">   
-                </div>
-                <h5 class="c1h5">Biscuits</h5>
-                <p class="p2" >1 UNIT <span class="gold-star">&#9733;</span>4.5</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>30</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-raspberries.png" alt="null" width="130px">   
-                </div>
-                <h5 class="c1h5">Rasberries</h5>
-                <p class="p2" >1 UNIT <span class="gold-star">&#9733;</span>4.3</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>50</p>
-              </div>
-        </div>
-    </div>
-     <div class="C">
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-avocado.png" alt="null" width="130px">   
-                </div>
-                <h5 class="c1h5">Avocado</h5>
-                <p class="p2" >250g<span class="gold-star">&#9733;</span>4.1</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>15</p>
-              </div>
-        </div>
-         <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-tomatoes.png" alt="null" width="130px">   
-                </div>
-                <h5 class="c1h5">Tomatoes</h5>
-                <p class="p2" >1/2kg<span class="gold-star">&#9733;</span>3.8</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>20</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-tomatoketchup.png" alt="null" width="120px">   
-                </div>
-                <h5 class="c1h5">Ketchup</h5>
-                <p class="p2" >1 UNIT<span class="gold-star">&#9733;</span>3.7</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>100</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/thumb-bananas.png" alt="null" width="110px">   
-                </div>
-                <h5 class="c1h5">Bananas</h5>
-                <p class="p2" >1/2 Dozen<span class="gold-star">&#9733;</span>4.6</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>30</p>
-              </div>
-        </div>
-        <div class="Categories">
-              <div class="c3">
-                <div class="wish">
-                <img src="img/wishlist.png" alt="null">
-                </div>
-                <div class="gb">
-                    <img src="img/post-thumb-2.jpg" alt="null" width="110px">   
-                </div>
-                <h5 class="c1h5">Cashews</h5>
-                <p class="p2" >500g<span class="gold-star">&#9733;</span>4.2</h6>
-                <p class="p1"><span class="rupee-symbol">&#8377;</span>150</p>
-              </div>
-        </div>
-    </div>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-section logo-social">
-            <img src="img/logo.png" alt="Food Mart Logo" class="logo">
-            <img src="img/sm2.png" alt="Social Media Icons" class="social">
-        </div>
-        <div class="footer-section">
-            <h4>Ultras</h4>
-            <p>About us</p>
-            <p>Conditions</p>
-            <p>Our Journals</p>
-            <p>Careers</p>
-            <p>Affiliate Programme</p>
-            <p>Ultras Press</p>
-        </div>
-        <div class="footer-section">
-            <h4>Customer Service</h4>
-            <p>FAQ</p>
-            <p>Contact</p>
-            <p>Privacy Policy</p>
-            <p>Returns & Refunds</p>
-            <p>Cookie Guidelines</p>
-            <p>Delivery Information</p>
-        </div>
-        <div class="footer-section">
-            <h4>Customer Service</h4>
-            <p>FAQ</p>
-            <p>Contact</p>
-            <p>Privacy Policy</p>
-            <p>Returns & Refunds</p>
-            <p>Cookie Guidelines</p>
-            <p>Delivery Information</p>
-        </div>
-        <div class="footer-section">
-            <h4>Subscribe Us</h4>
-            <p>Subscribe to our newsletter to get updates about our grand offers.</p>
-            <form>
-                <input type="email" placeholder="Email Address">
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2025 Foodmart. All rights reserved.</p>
-    </div>
-</footer>
-</div>
-    </body>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Foodmart. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
