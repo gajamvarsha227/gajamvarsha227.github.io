@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - 3</title>
+    <style>
+        h1
+        {
+            text-align: center;
+            margin-bottom: 30px;
+            color:#2c3e50
+        }
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .left, .right {
+            padding: 20px;
+            flex: 1;
+        }
+        .left {
+            background-color: white;
+            border-right: 1px solid #e0e0e0;
+        }
+        .right {
+            background-color: #f8f9fa;
+            display: none;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #customer-name {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+        #balance-msg {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bank ATM</h1>
+    <div class="container">
+        <div class="left" id="login">
+            <h2>Account Login</h2>
+            <div class="form-group">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter your card number">
+            </div>
+            <div class="form-group">
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin" placeholder="Enter your PIN">
+            </div>
+            <button id="loginBtn" onclick="checkLogin()">Login</button>
+            <p class="error-message" id="error-msg">Invalid card number or PIN. Please try again.</p>
+        </div>
+        <div class="right" id="welcome-screen">
+            <h2>Welcome, <span id="customer-name"></span></h2>
+            <div class="form-group">
+                <label for="transaction-type">Choose Transaction:</label>
+                <select id="transaction-type" onchange="showRecipientField()">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                    <option value="transfer">Fund Transfer</option>
+                </select>
+            </div>
+            <div class="form-group" id="recipient-group">
+                <label for="recipient-card">Recipient Card Number:</label>
+                <input type="text" id="recipient-card" placeholder="Enter recipient's card number" />
+            </div>
+            <div class="form-group">
+                <label for="amount">Enter Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" value="1000">
+            </div>
+            <button onclick="processTransaction()">Submit</button>
+            <p id="balance-msg"></p>
+        </div>
+    </div>
+
+    <script>
+    const customers = [
+        { cart: "1234567890", pin: "1234", name: "John", balance: 0 },
+        { cart: "1234567891", pin: "2345", name: "Cathy", balance: 0 }
+    ];
+    let currentCustomer=null;
+    function checkLogin() 
+    {
+        var cardNumber=document.getElementById("cardNumber").value;
+        var pinNumber=document.getElementById("pin").value;
+        currentCustomer=null;
+        for(var i=0;i<customers.length;i++) 
+        {
+            if(customers[i].cart===cardNumber && customers[i].pin===pinNumber)
+            {
+                currentCustomer=customers[i];
+                break;
+            }
+        }
+        if (currentCustomer)
+        {
+            document.getElementById("customer-name").innerHTML=currentCustomer.name;
+            document.getElementById("login").style.display="none";
+            document.getElementById("welcome-screen").style.display="block";
+            document.getElementById("error-msg").style.display="none";
+            updateBalanceMessage();
+        } else {
+            document.getElementById("error-msg").style.display="block";
+        }
+    }
+    function processTransaction() 
+    {
+        const type=document.getElementById("transaction-type").value;
+        const amount=parseFloat(document.getElementById("amount").value);
+        if (isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid amount.");
+            return;
+        }
+    if (type==="deposit") 
+    {
+        currentCustomer.balance+=amount;
+    } 
+    else if (type==="withdraw") 
+    {
+        if (currentCustomer.balance>=amount) 
+        {
+        currentCustomer.balance-=amount;
+        } 
+        else 
+        {
+            alert("Insufficient balance.");
+            return;
+        }
+    }
+    else if (type==="transfer") {
+        const recipientCard=document.getElementById("recipient-card").value;
+        const recipient=customers.find(c => c.cart === recipientCard && c.cart !== currentCustomer.cart);
+        if (!recipient) {
+            alert("Recipient not found or invalid card number.");
+            return;
+        }
+
+        if (currentCustomer.balance >= amount) 
+        {
+            currentCustomer.balance -= amount;
+            recipient.balance += amount;
+            alert(`₹${amount} transferred to ${recipient.name} successfully.`);
+        }
+        else 
+        {
+            alert("Insufficient balance.");
+            return;
+        }
+    }
+        updateBalanceMessage();
+    }
+
+    function updateBalanceMessage() 
+    {
+        document.getElementById("balance-msg").textContent =
+        `${currentCustomer.name}'s balance is now ₹${currentCustomer.balance}`;
+    }
+
+    function showRecipientField() {
+        var type = document.getElementById("transaction-type").value;
+        var recipientGroup = document.getElementById("recipient-group");
+        if (type === "transfer") 
+        {
+            recipientGroup.style.display = "block";
+        } 
+        else 
+        {
+            recipientGroup.style.display = "none";
+        }
+    }
+    document.getElementById("recipient-group").style.display = "none";
+</script>
+</body>
+</html>
