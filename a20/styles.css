@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  background: rgb(118, 191, 236);
+  background: rgb(194, 205, 211);
   padding: 30px 40px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,7 @@ input {
 
 button {
   padding: 10px 20px;
-  background-color: #3662c8;
+  background-color: #960202;
   color: white;
   border: none;
   border-radius: 6px;
